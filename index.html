@@ -419,7 +419,7 @@ var CATALOG={
   {id:"granola",name:"Granola",unit:"serving",serve:1,per:{k:140,p:4,c:22,f:5},pack:"1 bag",packPrice:5,perPack:12},
   {id:"muesli",name:"Muesli",unit:"serving",serve:1,per:{k:110,p:3,c:20,f:2},pack:"1 bag",packPrice:5,perPack:12},
   {id:"bran_flakes",name:"Bran flakes",unit:"serving",serve:1,per:{k:100,p:3,c:24,f:0.5},pack:"1 box",packPrice:4,perPack:14},
-  {id:"oats_c",name:"Oats",unit:"serving",serve:1,per:{k:150,p:5,c:27,f:2.5},pack:"canister",packPrice:5,perPack:14}
+  {id:"oats",name:"Oats",unit:"cup",serve:1,per:{k:300,p:10,c:54,f:5},pack:"canister (42 oz)",packPrice:5,perPack:14}
  ]
 };
 function catEntry(cls,id){var a=CATALOG[cls]||[];for(var i=0;i<a.length;i++){if(a[i].id===id)return a[i];}return null;}
@@ -476,7 +476,7 @@ var TARGET={k:2500,p:[150,170],c:[275,325],f:[65,80]};
 var DAYS=7;
 
 var state=null;
-function buildItem(id,cat,sub,swap){var d=catEntry(swap,id);return {id:id,cat:cat,sub:sub,swap:swap,curId:d.id,name:d.name,unit:d.unit,serve:d.serve,per:cp(d.per),buy:d.perPack,price:d.packPrice,qty:d.pack,subbed:false,custom:false};}
+function buildItem(id,cat,sub,swap){var d=catEntry(swap,id);if(!d){d={id:id,name:id,unit:"unit",serve:1,per:{k:0,p:0,c:0,f:0},pack:"",packPrice:0,perPack:0};}return {id:id,cat:cat,sub:sub,swap:swap,curId:d.id,name:d.name,unit:d.unit,serve:d.serve,per:cp(d.per),buy:d.perPack,price:d.packPrice,qty:d.pack,subbed:false,custom:false};}
 function defaultState(){
   var items=[];BASE.forEach(function(b){items.push(buildItem(b[0],b[1],b[2],b[3]));});
   Object.keys(NOSWAP).forEach(function(id){var d=NOSWAP[id];items.push({id:id,cat:d.cat,sub:d.sub,swap:null,curId:id,name:d.name,unit:d.unit,serve:d.serve,per:cp(d.per),buy:d.perPack,price:d.packPrice,qty:d.pack,subbed:false,custom:false});});
