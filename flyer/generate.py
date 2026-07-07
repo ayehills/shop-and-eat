@@ -155,35 +155,35 @@ html,body{{background:#0b0410}}
 .bottomscrim{{position:absolute;left:0;right:0;bottom:0;height:430px;z-index:6;pointer-events:none;
   background:linear-gradient(180deg,rgba(12,4,26,0) 0%,rgba(12,4,26,.35) 34%,rgba(10,3,22,.72) 62%,rgba(8,2,18,.9) 100%)}}
 
-.saturday{{top:686px;z-index:7;font-family:'Dancing Script';font-weight:700;font-size:150px;line-height:.8;
+.saturday{{top:660px;z-index:7;font-family:'Dancing Script';font-weight:700;font-size:140px;line-height:.8;
   color:#fff;text-shadow:0 0 22px rgba(200,150,255,.9),0 0 46px rgba(150,80,230,.7),0 6px 14px rgba(0,0,0,.5)}}
-.tag{{top:818px;z-index:8;font-family:'Great Vibes';font-size:36px;color:#f6d98a;
-  text-shadow:0 0 16px rgba(240,200,90,.5),0 2px 6px rgba(0,0,0,.6)}}
+.tag{{top:786px;z-index:8;font-family:'Great Vibes';font-size:56px;color:#f6d98a;line-height:1;
+  text-shadow:0 0 18px rgba(240,200,90,.55),0 2px 8px rgba(0,0,0,.65)}}
 
-.honoring{{top:868px;z-index:8;font-family:'Barlow Condensed';font-weight:600;letter-spacing:10px;
+.honoring{{top:858px;z-index:8;font-family:'Barlow Condensed';font-weight:600;letter-spacing:10px;
   font-size:24px;color:#f4d27a;text-shadow:0 0 12px rgba(240,200,90,.5)}}
 .honoring:before,.honoring:after{{content:'';display:inline-block;width:38px;height:1px;vertical-align:middle;margin:0 14px;background:#e9b949;opacity:.7}}
-.name{{top:894px;z-index:8;font-family:'Barlow Condensed';font-weight:700;font-style:italic;
-  font-size:60px;letter-spacing:1px;color:#fff;
+.name{{top:882px;z-index:8;font-family:'Barlow Condensed';font-weight:700;font-style:italic;
+  font-size:58px;letter-spacing:1px;color:#fff;
   text-shadow:0 2px 0 #6a4aa0,0 0 20px rgba(150,90,230,.55),0 4px 12px rgba(0,0,0,.5)}}
-.degree{{top:962px;z-index:8;font-family:'Barlow Condensed';font-weight:600;letter-spacing:4px;
+.degree{{top:948px;z-index:8;font-family:'Barlow Condensed';font-weight:600;letter-spacing:4px;
   font-size:23px;color:#f4d27a}}
 .degree b{{color:#fff;font-weight:700}}
 
 /* bottom band */
-.band{{position:absolute;left:44px;right:44px;top:998px;height:60px;z-index:8;
-  display:flex;align-items:center;justify-content:center;gap:20px}}
-.badge{{font-family:'Oswald';font-weight:700;color:#fff;text-align:center;line-height:.82;
-  min-width:104px}}
-.badge .big2{{font-size:42px;color:#f4d27a;text-shadow:0 0 12px rgba(240,200,90,.5)}}
-.badge .sub{{font-size:18px;letter-spacing:5px;color:#efe7ff}}
+.band{{position:absolute;left:56px;right:56px;top:982px;height:74px;z-index:8;
+  display:flex;align-items:center;justify-content:center;gap:24px}}
+.badge{{font-family:'Oswald';font-weight:700;color:#fff;text-align:center;line-height:1;
+  min-width:110px;display:flex;flex-direction:column;align-items:center}}
+.badge .big2{{font-size:40px;color:#f4d27a;text-shadow:0 0 12px rgba(240,200,90,.5)}}
+.badge .sub{{margin-top:6px;font-size:17px;letter-spacing:6px;color:#efe7ff}}
 .mid{{flex:1;text-align:center}}
 .venue{{font-family:'Barlow Condensed';font-weight:700;letter-spacing:3px;font-size:25px;color:#fff;
   text-shadow:0 0 12px rgba(150,90,230,.5)}}
-.addr{{margin-top:7px;display:inline-block;font-family:'Barlow Condensed';font-weight:600;letter-spacing:3px;
+.addr{{margin-top:9px;display:inline-block;font-family:'Barlow Condensed';font-weight:600;letter-spacing:3px;
   font-size:19px;color:#12042a;background:linear-gradient(90deg,#e9b949,#ffe9a8,#f0c85a);
   padding:5px 22px;border-radius:20px;box-shadow:0 4px 14px rgba(0,0,0,.4)}}
-.sep{{width:1px;height:48px;background:linear-gradient(180deg,rgba(240,200,90,0),rgba(240,200,90,.6),rgba(240,200,90,0))}}
+.sep{{width:1px;height:56px;background:linear-gradient(180deg,rgba(240,200,90,0),rgba(240,200,90,.6),rgba(240,200,90,0))}}
 </style></head><body>
 <div id="flyer">
   <svg class="grunge" xmlns="http://www.w3.org/2000/svg"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
