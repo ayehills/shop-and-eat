@@ -157,7 +157,7 @@ html,body{{background:#0b0410}}
 
 .saturday{{top:600px;z-index:7;font-family:'Dancing Script';font-weight:700;font-size:124px;line-height:.8;
   color:#fff;text-shadow:0 0 22px rgba(200,150,255,.9),0 0 46px rgba(150,80,230,.7),0 6px 14px rgba(0,0,0,.5)}}
-.tag{{top:756px;z-index:8;font-family:'Great Vibes';font-size:56px;color:#f6d98a;line-height:1;
+.tag{{top:786px;z-index:8;font-family:'Great Vibes';font-size:56px;color:#f6d98a;line-height:1;
   text-shadow:0 0 18px rgba(240,200,90,.55),0 2px 8px rgba(0,0,0,.65)}}
 
 .honoring{{top:830px;z-index:8;font-family:'Barlow Condensed';font-weight:600;letter-spacing:10px;
