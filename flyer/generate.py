@@ -155,34 +155,34 @@ html,body{{background:#0b0410}}
 .bottomscrim{{position:absolute;left:0;right:0;bottom:0;height:430px;z-index:6;pointer-events:none;
   background:linear-gradient(180deg,rgba(12,4,26,0) 0%,rgba(12,4,26,.35) 34%,rgba(10,3,22,.72) 62%,rgba(8,2,18,.9) 100%)}}
 
-.saturday{{top:566px;z-index:7;font-family:'Dancing Script';font-weight:700;font-size:120px;line-height:.8;
+.saturday{{top:600px;z-index:7;font-family:'Dancing Script';font-weight:700;font-size:124px;line-height:.8;
   color:#fff;text-shadow:0 0 22px rgba(200,150,255,.9),0 0 46px rgba(150,80,230,.7),0 6px 14px rgba(0,0,0,.5)}}
-.tag{{top:690px;z-index:8;font-family:'Great Vibes';font-size:56px;color:#f6d98a;line-height:1;
+.tag{{top:756px;z-index:8;font-family:'Great Vibes';font-size:56px;color:#f6d98a;line-height:1;
   text-shadow:0 0 18px rgba(240,200,90,.55),0 2px 8px rgba(0,0,0,.65)}}
 
-.honoring{{top:766px;z-index:8;font-family:'Barlow Condensed';font-weight:600;letter-spacing:10px;
+.honoring{{top:830px;z-index:8;font-family:'Barlow Condensed';font-weight:600;letter-spacing:10px;
   font-size:24px;color:#f4d27a;text-shadow:0 0 12px rgba(240,200,90,.5)}}
 .honoring:before,.honoring:after{{content:'';display:inline-block;width:38px;height:1px;vertical-align:middle;margin:0 14px;background:#e9b949;opacity:.7}}
-.name{{top:790px;z-index:8;font-family:'Barlow Condensed';font-weight:700;font-style:italic;
+.name{{top:856px;z-index:8;font-family:'Barlow Condensed';font-weight:700;font-style:italic;
   font-size:58px;letter-spacing:1px;color:#fff;
   text-shadow:0 2px 0 #6a4aa0,0 0 20px rgba(150,90,230,.55),0 4px 12px rgba(0,0,0,.5)}}
-.degree{{top:856px;z-index:8;font-family:'Barlow Condensed';font-weight:600;letter-spacing:4px;
+.degree{{top:922px;z-index:8;font-family:'Barlow Condensed';font-weight:600;letter-spacing:4px;
   font-size:23px;color:#f4d27a}}
 .degree b{{color:#fff;font-weight:700}}
 
 /* bottom footer */
-.venue{{top:886px;z-index:8;font-family:'Barlow Condensed';font-weight:700;letter-spacing:3px;font-size:30px;color:#fff;
+.venue{{top:958px;z-index:8;font-family:'Barlow Condensed';font-weight:700;letter-spacing:3px;font-size:26px;color:#fff;
   text-shadow:0 0 12px rgba(150,90,230,.5)}}
-.addr-wrap{{top:952px;z-index:8}}
-.addr{{display:inline-block;font-family:'Barlow Condensed';font-weight:700;letter-spacing:2px;
-  font-size:50px;line-height:1;color:#1a0636;background:linear-gradient(90deg,#e9b949,#ffe9a8,#f0c85a);
-  padding:9px 36px;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,.45)}}
+.addr-wrap{{top:1000px;z-index:8}}
+.addr{{display:inline-block;font-family:'Barlow Condensed';font-weight:600;letter-spacing:2px;
+  font-size:23px;line-height:1;color:#1a0636;background:linear-gradient(90deg,#e9b949,#ffe9a8,#f0c85a);
+  padding:6px 24px;border-radius:18px;box-shadow:0 5px 14px rgba(0,0,0,.42)}}
 .badge{{position:absolute;z-index:8;font-family:'Oswald';font-weight:700;color:#fff;text-align:center;line-height:1;
   display:flex;flex-direction:column;align-items:center}}
-.badge.left{{left:44px;top:856px}}
-.badge.right{{right:44px;top:856px}}
-.badge .big2{{font-size:60px;color:#f4d27a;text-shadow:0 0 14px rgba(240,200,90,.55)}}
-.badge .sub{{margin-top:6px;font-size:22px;letter-spacing:6px;color:#efe7ff}}
+.badge.left{{left:52px;top:952px}}
+.badge.right{{right:52px;top:952px}}
+.badge .big2{{font-size:52px;color:#f4d27a;text-shadow:0 0 14px rgba(240,200,90,.55)}}
+.badge .sub{{margin-top:6px;font-size:20px;letter-spacing:6px;color:#efe7ff}}
 </style></head><body>
 <div id="flyer">
   <svg class="grunge" xmlns="http://www.w3.org/2000/svg"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
