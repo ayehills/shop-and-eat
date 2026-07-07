@@ -145,10 +145,10 @@ html,body{{background:#0b0410}}
   text-shadow:1px 1px 0 #241141,2px 2px 0 #221040,3px 3px 0 #1f0e3b,4px 4px 0 #1c0d36,
     5px 5px 0 #190b31,6px 6px 0 #170a2d,7px 7px 0 #150928,8px 9px 12px rgba(0,0,0,.6);}}
 
-.subject{{position:absolute;left:50%;top:190px;transform:translateX(-50%);
+.subject{{position:absolute;left:50%;top:224px;transform:translateX(-50%);
   height:620px;z-index:5;
   filter:drop-shadow(0 18px 30px rgba(0,0,0,.6)) drop-shadow(0 0 40px rgba(150,80,230,.45));}}
-.subjglow{{position:absolute;left:50%;top:300px;transform:translateX(-50%);
+.subjglow{{position:absolute;left:50%;top:334px;transform:translateX(-50%);
   width:520px;height:560px;z-index:4;border-radius:50%;
   background:radial-gradient(circle,rgba(170,100,240,.5),rgba(120,50,200,.15) 55%,rgba(0,0,0,0) 72%);
   filter:blur(20px)}}
