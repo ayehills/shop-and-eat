@@ -159,6 +159,8 @@ html,body{{background:#0b0410}}
   color:#fff;text-shadow:0 0 22px rgba(200,150,255,.9),0 0 46px rgba(150,80,230,.7),0 6px 14px rgba(0,0,0,.5)}}
 .tag{{top:784px;z-index:8;font-family:'Dancing Script';font-weight:700;font-size:50px;color:#f6d98a;line-height:1;
   text-shadow:0 0 18px rgba(240,200,90,.55),0 2px 8px rgba(0,0,0,.65)}}
+.tag .hl{{color:#ffffff;font-style:italic;
+  text-shadow:0 0 20px rgba(210,160,255,.95),0 0 44px rgba(150,80,230,.75),0 2px 8px rgba(0,0,0,.6)}}
 
 .honoring{{top:830px;z-index:8;font-family:'Barlow Condensed';font-weight:600;letter-spacing:10px;
   font-size:24px;color:#f4d27a;text-shadow:0 0 12px rgba(240,200,90,.5)}}
@@ -205,7 +207,7 @@ html,body{{background:#0b0410}}
   <div class="bottomscrim"></div>
 
   <div class="layer saturday">Saturday</div>
-  <div class="layer tag">Let's celebrate this masterful achievement!</div>
+  <div class="layer tag">Let's celebrate this <span class="hl">masterful</span> achievement!</div>
 
   <div class="layer honoring">HONORING</div>
   <div class="layer name">MR HILLARY NWACHUKWU UMEH JR</div>
