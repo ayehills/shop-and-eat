@@ -1,0 +1,89 @@
+# ===========================================================================
+# inventory-monitor config
+# Copy this file to  config.yaml  and edit it.  Then:  python run.py
+# ===========================================================================
+
+settings:
+  poll_interval_seconds: 90      # base time between full passes
+  jitter_seconds: 30             # random 0-30s added each pass (be polite / less predictable)
+  request_timeout: 15
+  max_retries: 2                 # transient-error retries per target per pass
+  per_domain_min_gap_seconds: 5  # never hit the same store faster than this
+
+  # Notifications (all optional)
+  desktop_notifications: true    # native popup (needs: pip install plyer)
+  sound_alert: true              # terminal bell on restock
+  console_alert: true            # verbose per-check logging in the terminal
+  open_browser_on_restock: false # auto-open the product page when it restocks
+  discord_webhook: ""            # paste a Discord webhook URL to get phone alerts
+
+  # Only console-log (no popups/sound/Discord) during these local-time windows.
+  # Windows may wrap midnight, e.g. "23:30-07:00".
+  quiet_hours: []
+
+  state_file: "monitor_state.json"
+
+# ---------------------------------------------------------------------------
+# Guest-checkout quick-fill.  SHIPPING / CONTACT ONLY.
+# This block is what `python run.py profile copy` puts on your clipboard so you
+# can paste it into a store's guest-checkout form fast.
+# There is intentionally NO field for card number, CVV, or passwords — enter
+# those in your browser (its autofill remembers them securely). See README.
+# ---------------------------------------------------------------------------
+profile:
+  full_name: ""
+  email: ""
+  phone: ""
+  address1: ""
+  address2: ""
+  city: ""
+  state: ""
+  postal_code: ""
+  country: ""
+
+# ---------------------------------------------------------------------------
+# What to watch.  Each entry needs a `name` and a `url`.
+# `type: auto` (the default) figures out the right method from the URL:
+#   * Shopify product page  -> reads <url>.json for exact variant availability
+#   * Shopify collection    -> reads <url>/products.json, in stock if ANY item is
+#   * otherwise             -> set type: css  or  type: json  and add a rule below
+# ---------------------------------------------------------------------------
+watch:
+  # --- ONE PIECE examples -------------------------------------------------
+  # A Shopify PRODUCT page. Just give the URL; auto-detect does the rest.
+  - name: "ONE PIECE OP-XX Booster Box (example Shopify store)"
+    url: "https://example-tcg-store.com/products/one-piece-op11-booster-box"
+    type: auto
+
+  # A Shopify COLLECTION page — alerts if anything in the collection is buyable.
+  - name: "ONE PIECE new releases (example collection)"
+    url: "https://example-tcg-store.com/collections/one-piece"
+    type: auto
+
+  # A non-Shopify store read via a CSS rule. Here we call it IN STOCK when the
+  # page NO LONGER contains the text "Sold Out".
+  - name: "ONE PIECE box (generic store, text rule)"
+    url: "https://example-generic-store.com/one-piece-box"
+    type: css
+    in_stock_when: text_absent
+    match_text: "Sold Out"
+    price_selector: ".product-price"      # optional
+    enabled: false                        # flip to true once you set a real URL
+
+  # --- Pokemon "Pitch Black" examples ------------------------------------
+  # IN STOCK when an enabled "Add to Cart" button is present.
+  - name: "Pokemon Pitch Black — Booster Box (selector rule)"
+    url: "https://example-generic-store.com/pokemon-pitch-black-booster-box"
+    type: css
+    in_stock_when: selector_present
+    selector: "button.add-to-cart:not([disabled])"
+    price_selector: ".price"
+    enabled: false
+
+  # A JSON API example: IN STOCK when data.product.inventory > 0.
+  - name: "Pokemon Pitch Black — ETB (JSON API rule)"
+    url: "https://example-generic-store.com/api/products/pitch-black-etb"
+    type: json
+    availability_path: "data.product.inventory"
+    price_path: "data.product.price"
+    enabled: false
