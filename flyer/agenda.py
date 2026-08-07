@@ -99,9 +99,8 @@ def deco(w, h):
 
 def rows():
     out = []
-    for i, (title, sub) in enumerate(ITEMS, 1):
+    for title, sub in ITEMS:
         out.append(f"""<div class="item">
-      <div class="num">{i}</div>
       <div class="txt"><div class="it-title">{title}</div><div class="it-sub">{sub}</div></div>
     </div>""")
     return '<div class="divider"></div>'.join(out)
@@ -154,12 +153,8 @@ html,body{{background:#0b0410}}
   border:1px solid rgba(240,200,90,.32);border-radius:16px;
   box-shadow:inset 0 0 46px rgba(0,0,0,.45),0 10px 30px rgba(0,0,0,.35);
   padding:8px 34px}}
-.item{{flex:1;display:flex;align-items:center;gap:22px}}
-.num{{flex:none;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;
-  font-family:'Oswald';font-weight:700;font-size:28px;color:#2a1206;
-  background:radial-gradient(circle at 35% 28%,#ffe9a8,#f0c85a 55%,#d8a52f 100%);
-  box-shadow:0 4px 10px rgba(0,0,0,.45),inset 0 0 8px rgba(255,255,255,.5),0 0 16px rgba(240,200,90,.35)}}
-.txt{{flex:1}}
+.item{{flex:1;display:flex;align-items:center;justify-content:center;text-align:center}}
+.txt{{width:100%}}
 .it-title{{font-family:'Barlow Condensed';font-weight:700;font-size:29px;letter-spacing:1.5px;color:#fff;
   text-transform:uppercase;line-height:1.02;text-shadow:0 1px 6px rgba(0,0,0,.5)}}
 .it-sub{{font-family:'Barlow Condensed';font-weight:600;font-style:italic;font-size:19px;letter-spacing:.5px;
