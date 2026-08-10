@@ -172,7 +172,9 @@ html,body{{background:#0b0410}}
 .divider{{height:1px;background:linear-gradient(90deg,rgba(240,200,90,0),rgba(240,200,90,.35) 20%,rgba(240,200,90,.35) 80%,rgba(240,200,90,0));
   margin:0 -6px}}
 
-.footer{{margin-top:16px;font-family:'Barlow Condensed';font-weight:600;letter-spacing:3px;font-size:18px;color:#e9c877;
+.thanks{{margin-top:18px;font-family:'Dancing Script';font-weight:700;font-size:40px;color:#f6d98a;line-height:1;
+  text-shadow:0 0 18px rgba(240,200,90,.55),0 2px 8px rgba(0,0,0,.6)}}
+.footer{{margin-top:12px;font-family:'Barlow Condensed';font-weight:600;letter-spacing:3px;font-size:18px;color:#e9c877;
   text-align:center;text-shadow:0 0 10px rgba(240,200,90,.4)}}
 .footer .v{{color:#fff;font-weight:700}}
 
@@ -200,6 +202,7 @@ html,body{{background:#0b0410}}
     {rows()}
     </div>
 
+    <div class="thanks">Thank you for coming!</div>
     <div class="footer"><span class="v">GARDENVILLE RECREATION CENTER</span> &middot; 6219 SYMMES RD, GIBSONTON, FL 33534</div>
   </div>
   {wm}
