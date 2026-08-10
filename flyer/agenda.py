@@ -15,6 +15,11 @@ def font_face(family, fname, weight="400", style="normal"):
     return (f"@font-face{{font-family:'{family}';src:url(data:font/ttf;base64,{data}) "
             f"format('truetype');font-weight:{weight};font-style:{style};font-display:block;}}")
 
+CUTOUT = os.path.join(ROOT, "assets", "graduate_cutout.png")
+if not os.path.exists(CUTOUT):
+    CUTOUT = os.path.join(ROOT, "build", "graduate_cutout.png")
+CUTOUT_B64 = b64(CUTOUT) if os.path.exists(CUTOUT) else ""
+
 FACES = "".join([
     font_face("Archivo Black", "ArchivoBlack-Regular.ttf"),
     font_face("Oswald", "Oswald.ttf", "200 700"),
@@ -106,6 +111,11 @@ def rows():
     return '<div class="divider"></div>'.join(out)
 
 def build(w, h):
+    wm = ""
+    if CUTOUT_B64:
+        ww = int(w * 0.42)                      # watermark width
+        wm = (f'<img class="gradwm" style="width:{ww}px;right:26px;bottom:20px" '
+              f'src="data:image/png;base64,{CUTOUT_B64}"/>')
     return f"""<!DOCTYPE html><html><head><meta charset="utf-8"><style>
 {FACES}
 *{{margin:0;padding:0;box-sizing:border-box}}
@@ -165,6 +175,11 @@ html,body{{background:#0b0410}}
 .footer{{margin-top:16px;font-family:'Barlow Condensed';font-weight:600;letter-spacing:3px;font-size:18px;color:#e9c877;
   text-align:center;text-shadow:0 0 10px rgba(240,200,90,.4)}}
 .footer .v{{color:#fff;font-weight:700}}
+
+.gradwm{{position:absolute;z-index:7;pointer-events:none;opacity:.30;
+  filter:saturate(.9) drop-shadow(0 0 18px rgba(150,80,230,.4));
+  -webkit-mask-image:linear-gradient(to top left, rgba(0,0,0,1) 26%, rgba(0,0,0,.55) 55%, rgba(0,0,0,0) 82%);
+  mask-image:linear-gradient(to top left, rgba(0,0,0,1) 26%, rgba(0,0,0,.55) 55%, rgba(0,0,0,0) 82%)}}
 </style></head><body>
 <div id="page">
   <svg class="grunge" xmlns="http://www.w3.org/2000/svg"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
@@ -187,6 +202,7 @@ html,body{{background:#0b0410}}
 
     <div class="footer"><span class="v">GARDENVILLE RECREATION CENTER</span> &middot; 6219 SYMMES RD, GIBSONTON, FL 33534</div>
   </div>
+  {wm}
 </div>
 </body></html>"""
 
