@@ -106,7 +106,7 @@ def rows():
     out = []
     for title, sub in ITEMS:
         out.append(f"""<div class="item">
-      <div class="txt"><div class="it-title">{title}</div><div class="it-sub">{sub}</div></div>
+      <div class="txt"><div class="it-title">{title}</div></div>
     </div>""")
     return '<div class="divider"></div>'.join(out)
 
