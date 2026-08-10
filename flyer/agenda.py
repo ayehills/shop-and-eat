@@ -165,7 +165,7 @@ html,body{{background:#0b0410}}
   padding:8px 34px}}
 .item{{flex:1;display:flex;align-items:center;justify-content:center;text-align:center}}
 .txt{{width:100%}}
-.it-title{{font-family:'Barlow Condensed';font-weight:600;font-size:29px;letter-spacing:2.5px;color:#fff;
+.it-title{{font-family:'Barlow Condensed';font-weight:600;font-size:38px;letter-spacing:3px;color:#fff;
   text-transform:uppercase;line-height:1.02;text-shadow:0 1px 6px rgba(0,0,0,.45)}}
 .it-sub{{font-family:'Barlow Condensed';font-weight:600;font-style:italic;font-size:19px;letter-spacing:.5px;
   color:#f0cf88;margin-top:1px}}
