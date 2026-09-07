@@ -1,0 +1,13 @@
+# Your personal config (contains your shipping/contact info) — never commit it
+config.yaml
+
+# Runtime state
+monitor_state.json
+*.tmp
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.mypy_cache/

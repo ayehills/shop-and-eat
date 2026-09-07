@@ -1,0 +1,12 @@
+# Core (required)
+requests>=2.31
+beautifulsoup4>=4.12
+PyYAML>=6.0
+rich>=13.7
+
+# Optional, but recommended for the full experience.
+# The tool degrades gracefully if these are missing:
+#   - plyer:     native desktop notifications (Windows/macOS/Linux)
+#   - pyperclip: copy the quick-fill checkout profile to your clipboard
+plyer>=2.1
+pyperclip>=1.8
